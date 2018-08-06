@@ -1,0 +1,14 @@
+replicaCount: 1
+
+image:
+  repository: localhost:5000/com.white/rate-observer
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: ClusterIP
+  externalPort: 8080
+  internalPort: 8080
+
+ingress:
+  enabled: false
